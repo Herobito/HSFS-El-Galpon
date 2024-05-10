@@ -233,7 +233,7 @@
 
 </section>
 
-<section class="contact" id="contact">
+<!-- <section class="contact" id="contact">
 
     <div class="container min-vh-100">
 
@@ -243,15 +243,15 @@
 
             <div class="col-md-10" data-aos="flip-down">
 
-                <form action="">
+                <form action="enviar_sms.php" method="post">
 
                     <div class="inputBox">
                         <input type="text" placeholder="Nombre Completo">
-                        <input type="number" placeholder="Telefono">
+                        <input type="number" placeholder="DNI">
                     </div>
 
                     <div class="inputBox">
-                        <input type="email" placeholder="DNI">
+                        <input type="email" placeholder="E-mail">
                         <select name="" id="">
                             <option value="" disabled selected>Horario</option>
                             <option value="09-11 am">09-11 am</option>
@@ -273,6 +273,33 @@
 
     </div>
 
+</section> -->
+<section class="contact" id="contact">
+    <div class="container min-vh-100">
+        <div class="row justify-content-center">
+            <h1 class="heading"><span>'</span> Solicite su turno <span>'</span></h1>
+            <div class="col-md-10" data-aos="flip-down">
+                <form action="enviar_sms.php" method="post">
+                    <div class="inputBox">
+                        <input type="text" name="nombre" placeholder="Nombre Completo" required>
+                        <input type="number" name="telefono" placeholder="Teléfono" required>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="dni" placeholder="DNI" required>
+                        <select name="horario" required>
+                            <option value="" disabled selected>Horario</option>
+                            <option value="09-11 am">09-11 am</option>
+                            <option value="11-03 pm">11-03 pm</option>
+                            <option value="03-06 pm">03-06 pm</option>
+                            <option value="06-09 pm">06-09 pm</option>
+                        </select>
+                    </div>
+                    <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje (opcional)"></textarea>
+                    <input type="submit" value="Solicitar turno" class="button">
+                </form>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="post" id="post">
